@@ -1,0 +1,30 @@
+.ant-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: black;
+  font-weight: bold;
+}
+
+.ant-tabs-top > .ant-tabs-nav::before {
+  border-bottom: none;
+}
+
+.ant-tabs-nav-wrap {
+  border-bottom: none;
+}
+
+.ant-tabs-tabpane-active .ant-card:hover {
+  background-color: rgba(0, 128, 255, 0.08);
+}
+
+.ant-tabs-nav .ant-tabs-tab {
+  font-size: 20px;
+  margin-right: 20px;
+}
+
+.image-with-border {
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+
+.ant-tabs-tab-btn {
+  color: grey;
+}

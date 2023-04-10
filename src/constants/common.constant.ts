@@ -1,0 +1,2 @@
+export const MY_BEER_IMAGE = `https://firebasestorage.googleapis.com/v0/b/beer-list-e0bd6.appspot.com/o/Screenshot%202023-04-10%20at%2018.36.17.png?alt=media&token=e2bf7394-ca78-4b59-b6c6-d3107608672d`;
+export const MY_BEER_IMAGE_POPUP = `https://firebasestorage.googleapis.com/v0/b/beer-list-e0bd6.appspot.com/o/Screenshot%202023-04-10%20at%2018.40.12.png?alt=media&token=a07e6695-7227-47d5-841b-b27ba8f18315`;
