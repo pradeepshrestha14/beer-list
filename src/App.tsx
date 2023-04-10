@@ -1,5 +1,3 @@
-import * as dotenv from "dotenv"; // see https://github.com/motdotla/dotenv#how-do-i-use-dotenv-with-import
-dotenv.config();
 import "./App.css";
 import { useState } from "react";
 import { Row, Col } from "antd";

@@ -1,4 +1,4 @@
-import { Col, Row } from "antd";
+import { Col, Row, Skeleton } from "antd";
 import { useContext, useEffect, useRef, useState } from "react";
 
 import BeerCard from "../beerCard/BeerCard";
@@ -8,17 +8,16 @@ import TAB_CONSTANTS from "../../constants/tab.constant";
 
 import React from "react";
 import usefetchMyBeers from "./hooks/useFetchMyBeers.hook";
+import SkeletonLoader from "../../common/SkeletonLoader";
 
 const { TAB_LIST } = TAB_CONSTANTS;
 const { tab_2 } = TAB_LIST;
-
-
 
 const MyBeer = () => {
   const listRef: any = useRef();
   const { rootStore, setRootStore }: any = useContext(StoreContext);
   const currentPage = rootStore.tabs[tab_2.key].currentPage;
-  const myBeers = usefetchMyBeers(currentPage, 10);
+  const { data: myBeers, loading } = usefetchMyBeers(currentPage, 10);
 
   useEffect(() => {
     const updatedRootStore = {
@@ -31,6 +30,7 @@ const MyBeer = () => {
     setRootStore(updatedRootStore);
   }, [JSON.stringify(myBeers)]);
 
+  if (loading) return <SkeletonLoader />;
   if (!myBeers || !myBeers?.length) return <EmptyPage />;
 
   return (

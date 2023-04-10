@@ -12,8 +12,10 @@ import { FIRESTORE_COLLECTION_NAME } from "../../../constants/firebase.constant"
 
 const useFetchMyBeers = (page: any, pageSize: any) => {
   const [data, setData] = useState<any>([]);
+  const [loading, setLoading] = useState<boolean>(false);
 
   useEffect(() => {
+    setLoading(true);
     const postsRef = collection(db, FIRESTORE_COLLECTION_NAME);
     const pageQuery = query(
       postsRef,
@@ -27,12 +29,13 @@ const useFetchMyBeers = (page: any, pageSize: any) => {
         id: doc?.id,
       }));
       setData(() => [...newData]);
+      setLoading(false);
     });
 
     return () => unsubscribe();
   }, [page, pageSize]);
 
-  return data;
+  return { data, loading };
 };
 
 export default useFetchMyBeers;
