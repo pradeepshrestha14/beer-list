@@ -64,4 +64,7 @@ My React App is composed of several components:
 ### Hosted in Firebase (You could play around with this app live in following URL)
 - Link is : https://beer-list-e0bd6.web.app/ 
 
+### All api documentation is here:
+-  https://punkapi.com/documentation/v2
+
 
