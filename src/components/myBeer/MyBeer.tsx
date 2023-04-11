@@ -38,7 +38,7 @@ const MyBeer = () => {
       ref={listRef}
       gutter={[16, 16]}
       style={{
-        height: myBeers?.length > 6 ? "calc(100vh - 180px)" : "",
+        height: myBeers?.length > 4 ? "calc(100vh - 180px)" : "",
         overflowY: "scroll",
         padding: 5,
       }}
